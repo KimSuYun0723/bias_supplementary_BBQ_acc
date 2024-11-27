@@ -1,0 +1,3 @@
+[submodule "LRQA"]
+	path = LRQA
+	url = https://github.com/KimSuYun0723/lrqa.git
