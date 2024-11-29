@@ -1,0 +1,6 @@
+[submodule "LRQA"]
+	path = LRQA
+	url = https://github.com/zphang/lrqa.git
+[submodule "BBQ"]
+	path = BBQ
+	url = https://github.com/nyu-mll/BBQ.git
