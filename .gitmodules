@@ -1,0 +1,3 @@
+[submodule "lrqa"]
+	path = lrqa
+	url = https://github.com/zphang/lrqa.git
