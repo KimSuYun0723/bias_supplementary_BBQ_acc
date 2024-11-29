@@ -1,7 +1,0 @@
-[submodule "lrqa"]
-	path = lrqa
-	url = https://github.com/zphang/lrqa.git
-
-[submodule "LRQA"]
-	path = LRQA
-	url = https://github.com/KimSuYun0723/bias_supplementary_BBQ_acc/model.git
