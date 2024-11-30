@@ -7,6 +7,7 @@ from tqdm import tqdm
 import argparse
 import jsonlines
 import wandb 
+from unlog_qa_head import UnLogForMultipleChoice
 
 # Custom Dataset for BBQ
 class BBQDataset(Dataset):
@@ -118,8 +119,15 @@ def main(args):
         revision=args.model_revision,
     )
 
-    #tokenizer = AutoTokenizer.from_pretrained(args.model_name_or_path)
-    model = AutoModelForMultipleChoice.from_pretrained(
+    #if bert
+    """model = AutoModelForMultipleChoice.from_pretrained(
+        args.model_name_or_path,
+        config=config,
+        revision=args.model_revision,
+        torch_dtype=torch.float16 if torch.cuda.is_available() else torch.float32,
+        )"""
+    #if unlog
+    model = UnLogForMultipleChoice.from_pretrained(
         args.model_name_or_path,
         config=config,
         revision=args.model_revision,
