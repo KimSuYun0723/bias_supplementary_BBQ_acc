@@ -1,3 +1,6 @@
-EXP_FOL_bert/
-model/unlog_model/
+EXP_FOL_bert/bbq/
+EXP_FOL_unlog/race/
+EXP_FOL_unlog/bbq/
+models/unlog_model/
 wandb/
+evaluation/__pycache__/
