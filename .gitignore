@@ -1,5 +1,7 @@
 EXP_FOL_bert/bbq/
+EXP_FOL_bert/race_run/
 EXP_FOL_unlog/race/
+EXP_FOL_unlog/race_run/
 EXP_FOL_unlog/bbq/
 models/unlog_model/
 wandb/
