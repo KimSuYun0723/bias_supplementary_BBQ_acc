@@ -1,0 +1,60 @@
+{
+    "average_accuracy": 0.48885746299589666,
+    "categories": [
+        {
+            "category": "Religion",
+            "accuracy": 0.49166666666666664,
+            "num_samples": 1200
+        },
+        {
+            "category": "Race_ethnicity",
+            "accuracy": 0.5026162790697675,
+            "num_samples": 6880
+        },
+        {
+            "category": "Physical_appearance",
+            "accuracy": 0.4936548223350254,
+            "num_samples": 1576
+        },
+        {
+            "category": "Disability_status",
+            "accuracy": 0.4569408740359897,
+            "num_samples": 1556
+        },
+        {
+            "category": "Sexual_orientation",
+            "accuracy": 0.47800925925925924,
+            "num_samples": 864
+        },
+        {
+            "category": "Race_x_SES",
+            "accuracy": 0.49874551971326164,
+            "num_samples": 11160
+        },
+        {
+            "category": "Age",
+            "accuracy": 0.49320652173913043,
+            "num_samples": 3680
+        },
+        {
+            "category": "SES",
+            "accuracy": 0.49475524475524474,
+            "num_samples": 6864
+        },
+        {
+            "category": "Nationality",
+            "accuracy": 0.5071428571428571,
+            "num_samples": 3080
+        },
+        {
+            "category": "Race_x_gender",
+            "accuracy": 0.49542606516290727,
+            "num_samples": 15960
+        },
+        {
+            "category": "Gender_identity",
+            "accuracy": 0.4652679830747532,
+            "num_samples": 5672
+        }
+    ]
+}
