@@ -2,6 +2,7 @@
 This is a repository for a supplementary experiment to measure accuracy on the BBQ benchmark.
 
 ## Path
+```
 📦BBQ                            // BBQ 관련 폴더      
 📦evaluation                     // 평가 관련 폴더      
  ┗ 📂image                       // 이미지 관련 폴더      
@@ -49,3 +50,4 @@ This is a repository for a supplementary experiment to measure accuracy on the B
  ┗ 📜run_unlog.sh                // UnLog 모델 실행을 위한 쉘 스크립트      
       
 📜graph.py                       // 그래프를 그리기 위한 파이썬 스크립트      
+```
