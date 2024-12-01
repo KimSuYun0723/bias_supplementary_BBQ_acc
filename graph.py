@@ -3,7 +3,7 @@ import numpy as np
 
 # Data for comparison
 categories = [
-    "Age", "Disability_status", "Gender_identity","Nationality",    "Physical_appearance", "Race_ethnicity",
+    "Age", "Disability_status", "Gender_identity","Nationality", "Physical_appearance", "Race_ethnicity",
     "Race_x_gender", "Race_x_SES", "Religion", "SES", "Sexual_orientation"
 ]
 
@@ -30,17 +30,17 @@ width = 0.4  # Bar width
 
 # Plotting the bars for BERT and UnLog models
 bars_bert = ax.bar(x - width/2, bert_accuracies, width, label="BERT (baseline)", color='orange')
-bars_unlog = ax.bar(x + width/2, unlog_accuracies, width, label="UnLog (our model)", color='blue')
+bars_unlog = ax.bar(x + width/2, unlog_accuracies, width, label="UnLoG (our model)", color='blue')
 
 # Adding labels and title
 ax.set_xlabel('Category', fontsize=12)
 ax.set_ylabel('Accuracy', fontsize=12)
-ax.set_title('BBQ Accuracy Comparison: BERT vs UnLog', fontsize=14)
+ax.set_title('BBQ Accuracy Comparison: BERT vs UnLoG', fontsize=14)
 ax.set_xticks(x)
 ax.set_xticklabels(categories, rotation=45, ha='right', fontsize=10)
 ax.legend()
 
-"""# Adding values on top of the bars
+# Adding values on top of the bars
 def add_labels(bars):
     for bar in bars:
         height = bar.get_height()
@@ -51,17 +51,17 @@ def add_labels(bars):
                     ha='center', va='bottom', fontsize=10)
 
 add_labels(bars_bert)
-add_labels(bars_unlog)"""
+add_labels(bars_unlog)
 
-save_path = "/home/nlpgpu7/ellt/suyun/bbq_accuracy/evaluation/nolabel_BBQ_accuracy_comparison.png"
+save_path = "/home/nlpgpu7/ellt/suyun/bbq_accuracy/evaluation/image/BBQ_accuracy_comparison.png"
 plt.tight_layout()
 plt.savefig(save_path)
 print(f"그래프가 저장되었습니다: {save_path}")
 
 ##################################################################
 #2. 전체
-"""# Data for overall average accuracy comparison
-models = ['BERT', 'UnLog']
+# Data for overall average accuracy comparison
+models = ['BERT', 'UnLoG']
 average_accuracies = [0.40267884624845307, 0.48885746299589666]
 
 # Set up the figure for plotting
@@ -72,7 +72,7 @@ bars = ax.bar(models, average_accuracies, color=['orange', 'blue'])
 
 # Adding labels and title
 ax.set_ylabel('Average Accuracy', fontsize=12)
-ax.set_title('BBQ Average Accuracy Comparison: BERT vs UnLog', fontsize=14)
+ax.set_title('BBQ Average Accuracy Comparison: BERT vs UnLoG', fontsize=14)
 
 # Adding values on top of the bars
 def add_labels(bars):
@@ -86,7 +86,7 @@ def add_labels(bars):
 
 add_labels(bars)
 
-save_path = "/home/nlpgpu7/ellt/suyun/bbq_accuracy/evaluation/total_nolabel_BBQ_accuracy_comparison.png"
+save_path = "/home/nlpgpu7/ellt/suyun/bbq_accuracy/evaluation/image/total_nolabel_BBQ_accuracy_comparison.png"
 plt.tight_layout()
 plt.savefig(save_path)
-print(f"그래프가 저장되었습니다: {save_path}")"""
+print(f"그래프가 저장되었습니다: {save_path}")
