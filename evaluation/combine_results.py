@@ -9,14 +9,23 @@ python /home/nlpgpu7/ellt/suyun/bbq_accuracy/evaluation/combine_results.py \
     --output_file /home/nlpgpu7/ellt/suyun/bbq_accuracy/EXP_FOL_bert/bbq/combined_results.json
 """
 
+category_results = [
+    "Age", "Disability_status", "Gender_identity","Nationality", "Physical_appearance", "Race_ethnicity",
+    "Race_x_gender", "Race_x_SES", "Religion", "SES", "Sexual_orientation"
+]
+
 def combine_results(result_dir, output_file):
-    category_results = []
+    category_results = [
+        "Age", "Disability_status", "Gender_identity","Nationality", "Physical_appearance", "Race_ethnicity",
+        "Race_x_gender", "Race_x_SES", "Religion", "SES", "Sexual_orientation"
+    ]
     total_accuracy = 0.0
     num_categories = 0
 
-    for category in os.listdir(result_dir):
+    for category in category_results:
+        category =str(category)
         print(category)
-        category_path = os.path.join(result_dir, category, "evaluation_results.json")
+        category_path = os.path.join(str(result_dir), str(category), "evaluation_results.json")
         if not os.path.exists(category_path):
             print(f"Warning: No results found for category <{category_path}>. Skipping...")
             break

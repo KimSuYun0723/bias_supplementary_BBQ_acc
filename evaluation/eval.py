@@ -1,7 +1,7 @@
 import json
 import os
 import torch
-from transformers import AutoTokenizer, AutoConfig, AutoModelForMultipleChoice
+from transformers import RobertaTokenizer, RobertaForMultipleChoice, AutoConfig
 from torch.utils.data import DataLoader, Dataset
 from tqdm import tqdm
 import argparse
@@ -113,7 +113,7 @@ def main(args):
         revision=args.model_revision,
     )
 
-    tokenizer = AutoTokenizer.from_pretrained(
+    tokenizer = RobertaTokenizer.from_pretrained(
         args.config_name if args.config_name else args.model_name_or_path,
         use_fast=args.use_fast_tokenizer,
         revision=args.model_revision,
@@ -127,7 +127,7 @@ def main(args):
         torch_dtype=torch.float16 if torch.cuda.is_available() else torch.float32,
         )"""
     #if unlog
-    model = UnLogForMultipleChoice.from_pretrained(
+    model = RobertaForMultipleChoice.from_pretrained(
         args.model_name_or_path,
         config=config,
         revision=args.model_revision,
