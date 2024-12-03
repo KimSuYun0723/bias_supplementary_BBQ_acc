@@ -3,6 +3,10 @@ EXP_FOL_bert/race_run/
 EXP_FOL_unlog/race/
 EXP_FOL_unlog/race_run/
 EXP_FOL_unlog/bbq/
+EXP_FOL_roberta/bbq/
+EXP_FOL_roberta/race/
+EXP_FOL_roberta/race_run/
 models/unlog_model/
 wandb/
 evaluation/__pycache__/
+roberta_model/
