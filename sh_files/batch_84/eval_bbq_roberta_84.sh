@@ -1,16 +1,16 @@
-EXP_FOL=/home/nlpgpu7/ellt/suyun/bbq_accuracy/EXP_FOL_roberta
+EXP_FOL=/home/juaekim/storage/bias_supplementary_BBQ_acc/EXP_FOL_roberta_84
 BATCH_SIZE=8
-MODEL_PATH=/home/nlpgpu7/ellt/suyun/bbq_accuracy/EXP_FOL_roberta/race_run/checkpoint-last
+MODEL_PATH=/home/juaekim/storage/bias_supplementary_BBQ_acc/EXP_FOL_roberta_84/race_run/checkpoint-last
 MAX_SEQ_LENGTH=512
-BBQ_DATA=/home/nlpgpu7/ellt/suyun/bbq_accuracy/BBQ/data  
+BBQ_DATA=/home/juaekim/storage/bias_supplementary_BBQ_acc/BBQ/data  
 
-python /home/nlpgpu7/ellt/suyun/bbq_accuracy/LRQA/lrqa/scripts/bbq_preproc.py \
+python /home/juaekim/storage/bias_supplementary_BBQ_acc/LRQA/lrqa/scripts/bbq_preproc.py \
     --input_data_path=${BBQ_DATA} \
     --data_path ${EXP_FOL}/bbq
 
 for CATEGORY in Age Disability_status Gender_identity Nationality Physical_appearance Race_ethnicity Race_x_SES Race_x_gender Religion SES Sexual_orientation; do
     echo "Evaluating category: ${CATEGORY}"
-    python /home/nlpgpu7/ellt/suyun/bbq_accuracy/evaluation/eval.py \
+    python /home/juaekim/storage/bias_supplementary_BBQ_acc/evaluation/eval.py \
         --model_name_or_path ${MODEL_PATH} \
         --data_file ${EXP_FOL}/bbq/${CATEGORY}/validation.jsonl \
         --batch_size ${BATCH_SIZE} \
