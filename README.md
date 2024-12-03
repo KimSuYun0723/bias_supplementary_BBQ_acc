@@ -5,7 +5,7 @@ This is a repository for a supplementary experiment to measure accuracy on the B
 ```
 📦BBQ                            // BBQ submodule         
       
-📦EXP_FOL_bert                       
+📦EXP_FOL_bert                   // bert-base-uncased 모델을 위한 실험 폴더                       
  ┗ 📂bbq_results                     
     ┣ 📂Age                           
     ┣ 📂Disability_status           
