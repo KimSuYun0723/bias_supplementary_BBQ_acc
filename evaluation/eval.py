@@ -7,7 +7,10 @@ from tqdm import tqdm
 import argparse
 import jsonlines
 import wandb 
-from unlog_qa_head import UnLogForMultipleChoice
+
+import sys
+sys.path.append('/home/juaekim/storage/bias_supplementary_BBQ_acc/LRQA')
+from unlog_roberta_head import UnLogRobertaForMultipleChoice
 
 # Custom Dataset for BBQ
 class BBQDataset(Dataset):
@@ -127,7 +130,7 @@ def main(args):
         torch_dtype=torch.float16 if torch.cuda.is_available() else torch.float32,
         )"""
     #if unlog
-    model = RobertaForMultipleChoice.from_pretrained(
+    model = UnLogRobertaForMultipleChoice.from_pretrained(
         args.model_name_or_path,
         config=config,
         revision=args.model_revision,
