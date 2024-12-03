@@ -1,3 +1,6 @@
 [submodule "LRQA"]
 	path = LRQA
 	url = https://github.com/KimSuYun0723/lrqa.git
+[submodule "BBQ"]
+	path = BBQ
+	url = https://github.com/KimSuYun0723-mll/BBQ.git
