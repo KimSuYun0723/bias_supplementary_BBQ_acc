@@ -1,5 +1,4 @@
 export PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True
-export CUDA_VISIBLE_DEVICES=0,1
 
 EXP_FOL=/home/nlpgpu7/ellt/suyun/bbq_accuracy/EXP_FOL_unlog_roberta
 HF_MODEL_NAME=/home/nlpgpu7/ellt/suyun/bbq_accuracy/models/unlog_roberta # UnLoG roberta base
